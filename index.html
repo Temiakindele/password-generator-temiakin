@@ -6,28 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
-    <div class="wrapper">
+    <section class="wrapper">
         <header>
             <h1>Password Generator</h1>
         </header>
-        <div class="card">
-            <div class="card-header">
-                <h2>Generate a Password</h2>
-            </div>
-            <div class="card-body">
-                <textarea readonly id="password" placeholder="Your Secure Password"
-                    aria-label="Generated Password"></textarea>
-            </div>
-            <div class="card-footer">
-                <button id="generate" class="btn">Generate Password</button>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+        <form>
+            <!-- Welcome message and user instructions for form -->
+            <p>
+                Welcome to the Password Generator.
+                Passwords must be between 8 - 128 characters and at least one character type must be selected ( Lowercase, Uppercase, Numeric, Special characters ($@%&*, etc) ).
+            </p>
+            <!-- Form elements to generate a new password -->
+            <!-- Range (slider) to input password length: only accepts the allowed range (between 8 - 128 characters) -->
+            <label for="passwordLength">Password Length:</label>
+            <input type="range" id="passwordLength" min="8" max="128" value="8" />
+            <span id="passwordLengthValue">8</span>
+            <p></p>
+
+            <label for="specialCharacters">Include Special Characters:</label>
+            <input type="checkbox" id="specialCharacters" />
+
+            <label for="numericCharacters">Include Numeric Characters:</label>
+            <input type="checkbox" id="numericCharacters" />
+            <p></p>
+
+            <label for="lowerCasedCharacters">Include Lowercase Characters:</label>
+            <input type="checkbox" id="lowerCasedCharacters" />
+
+            <label for="upperCasedCharacters">Include Uppercase Characters:</label>
+            <input type="checkbox" id="upperCasedCharacters" />
+            <p></p>
+
+            <button id="generate" class="btn"><i class="fa-solid fa-key"></i> Generate Password</button>
+
+            <input type="reset" value="Reset" class="btn" id="btn-reset">
+
+            <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
+        </form>
+    </section>
+
+    <!-- JavaScript references -->
+    <script src="./assets/script.js"></script>
+    <!-- Font awsome kit reference (for icons) -->
+    <script src="https://kit.fontawesome.com/b00aec035f.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
