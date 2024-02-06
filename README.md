@@ -7,7 +7,7 @@ Built an application that an employee can use to generate a random password base
 ## Badges
 
 ## Visuals
-
+![Alt text](assets/images/screencapture-file-Users-temiakindele-bootcamp-Homework-password-generator-temiakin-index-html-2024-02-06-15_50_28.png)
 
 ## Installation
 
